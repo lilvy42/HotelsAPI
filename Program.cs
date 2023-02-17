@@ -20,7 +20,8 @@ if (app.Environment.IsDevelopment())
     db.Database.EnsureCreated();
 }
 
-app.MapGet("/hotels", async (IHotelRepository repository) => Results.Ok(await repository.GetHotelsAsync()))
+app.MapGet("/hotels", async (IHotelRepository repository) => 
+   Results.Extensions.Xml(await repository.GetHotelsAsync()))
     .Produces<List<Hotel>>(StatusCodes.Status200OK)
     .WithName("GetAllHotels")
     .WithTags("Getters");
