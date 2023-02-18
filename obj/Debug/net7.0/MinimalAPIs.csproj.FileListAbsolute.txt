@@ -62,3 +62,11 @@ C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Swashbuckle.Asp
 C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\obj\Debug\net7.0\MinimalAPIs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\8.1\Desktop\minAPIs course\MinimalAPIs\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
