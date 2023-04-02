@@ -12,8 +12,8 @@ public class AuthAPI : IAPI
 
             var userDto = userRepository.GetUser(userModel);
             if (userDto == null) return Results.Unauthorized();
-            var token = tokenService.BuildToken(app.Configuration["Jwt:Key"],
-                app.Configuration["Jwt:Issuer"], userDto);
+            var token = tokenService.BuildToken(app.Configuration["Jwt:Key"] ?? "unknown",
+                app.Configuration["Jwt:Issuer"] ?? "unknown", userDto);
     
             return Results.Ok(token);
         })

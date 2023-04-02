@@ -8,36 +8,36 @@ public class HotelsAPI : IAPI
             .WithName("GetAllHotels")
             .WithTags("Getters");
 
-    app.MapGet("/hotels/search/name/{query}", SearchByName)
-        .Produces<List<Hotel>>(StatusCodes.Status200OK)
-        .Produces(StatusCodes.Status404NotFound)
-        .Produces(StatusCodes.Status401Unauthorized)
-        .WithName("SearchHotels")
-        .WithTags("Getters");
-
-    app.MapGet("/hotels/{id}", GetById)
-        .Produces<Hotel>(StatusCodes.Status200OK)
-        .Produces(StatusCodes.Status401Unauthorized)
-        .WithName("GetOneHotel")
+        app.MapGet("/hotels/search/name/{query}", SearchByName)
+            .Produces<List<Hotel>>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound)
+            .Produces(StatusCodes.Status401Unauthorized)
+            .WithName("SearchHotels")
             .WithTags("Getters");
 
-    app.MapPost("/hotels", Create)
-    .Accepts<Hotel>("application/json")
-    .Produces<Hotel>(StatusCodes.Status201Created)
-    .Produces(StatusCodes.Status401Unauthorized)
-    .WithName("CreateHotel")
-    .WithTags("Creators");
+        app.MapGet("/hotels/{id}", GetById)
+            .Produces<Hotel>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status401Unauthorized)
+            .WithName("GetOneHotel")
+            .WithTags("Getters");
 
-    app.MapPut("/hotels", Update)
-    .Accepts<Hotel>("application/json")
-    .Produces(StatusCodes.Status401Unauthorized)
-    .WithName("UpdateHotel")
-    .WithTags("Updaters");
+        app.MapPost("/hotels", Create)
+            .Accepts<Hotel>("application/json")
+            .Produces<Hotel>(StatusCodes.Status201Created)
+            .Produces(StatusCodes.Status401Unauthorized)
+            .WithName("CreateHotel")
+            .WithTags("Creators");
 
-    app.MapDelete("/hotels/{id}", Delete)
-    .Produces(StatusCodes.Status401Unauthorized)
-    .WithName("DeleteHotel")
-    .WithTags("Deteters");
+        app.MapPut("/hotels", Update)
+            .Accepts<Hotel>("application/json")
+            .Produces(StatusCodes.Status401Unauthorized)
+            .WithName("UpdateHotel")
+            .WithTags("Updaters");
+
+        app.MapDelete("/hotels/{id}", Delete)
+            .Produces(StatusCodes.Status401Unauthorized)
+            .WithName("DeleteHotel")
+            .WithTags("Deteters");
 
     }
 

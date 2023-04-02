@@ -21,7 +21,7 @@ void RegisterServices(IServiceCollection services)
     services.AddSwaggerGen();
     services.AddDbContext<HotelDbContext>(options =>
     {
-        options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
+        options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite-Hotels"));
     });
 
     services.AddScoped<IHotelRepository, HotelRepository>();
@@ -41,7 +41,7 @@ void RegisterServices(IServiceCollection services)
                 ValidIssuer = builder.Configuration["Jwt:Issuer"],
                 ValidAudience = builder.Configuration["Jwt:Audience"],
                 IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
+                    Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "default")
             )
         };
     });

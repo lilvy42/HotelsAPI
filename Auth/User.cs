@@ -1,6 +1,6 @@
 public record UserDto(string UserName, string Password);
 
-public record UserModel
+public class UserModel
 {
     [Required]
     public string UserName { get; set; } = string.Empty;
